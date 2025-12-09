@@ -12,11 +12,9 @@ Landing page / portafolio profesional que muestra proyectos, contacto y CV.
 - CSS
 - JavaScript
 
-## Wireframe
-Enlace al wireframe (si aplica): [enlace a Figma / mockup / draw.io]
 
 ## Instrucciones para ejecución local
-1. Clonar el repo: `git clone https://github.com/tu-usuario/nombre-repo.git`
+1. Clonar el repo: https://692cda9eaa0805c1ad44eebf--gleaming-dolphin-0b0eaf.netlify.app/
 2. Abrir `index.html` en el navegador o servir con Live Server.
 
 ## Repositorio remoto
