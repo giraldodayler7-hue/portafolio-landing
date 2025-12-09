@@ -10,6 +10,24 @@ Landing page / portafolio profesional que muestra proyectos, contacto y CV.
 ## Tecnologías utilizadas
 - HTML
 - CSS
-- JavaScript 
+- JavaScript
+
+## Wireframe
+Enlace al wireframe (si aplica): [enlace a Figma / mockup / draw.io]
+
+## Instrucciones para ejecución local
+1. Clonar el repo: `git clone https://github.com/tu-usuario/nombre-repo.git`
+2. Abrir `index.html` en el navegador o servir con Live Server.
+
+## Repositorio remoto
+Enlace: 
+
+## Capturas / Evidencias
+- <img width="1920" height="1080" alt="commits" src="https://github.com/user-attachments/assets/44244817-d158-4444-9e4d-93ac5102cd95" />
+
+
+## Notas
+Cualquier dependencia o instrucción adicional.
+
 
 
