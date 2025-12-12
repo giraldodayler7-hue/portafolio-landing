@@ -1,1 +1,49 @@
+document.addEventListener('DOMContentLoaded', () => {
+   
+    const formulario = document.querySelector('.formulario-cta');
+    const botonEnviar = document.querySelector('.boton-cta');
 
+    const numeroWhatsApp = "(+57) 3007069328"; 
+
+    // 2. Agregar el listener de evento al formulario
+    if (formulario) {
+        formulario.addEventListener('submit', function(event) {
+            // Prevenir el envío tradicional del formulario (que recarga la página)
+            event.preventDefault(); 
+            
+            //  Capturar los datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            //  Crear el mensaje pre-llenado para WhatsApp
+            const mensajeParaWhatsApp = `Hola, mi nombre es ${nombre} y estoy interesado/a en tus servicios de desarrollo. Mi correo es ${correo}. Aquí está mi mensaje: ${mensaje}`;
+            
+            // Codificar el mensaje para que sea válido en la URL
+            const mensajeCodificado = encodeURIComponent(mensajeParaWhatsApp);
+            
+            //  Construir el enlace de WhatsApp (usando la API de wa.me)
+            const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+            //  Validar que los campos no estén vacíos antes de abrir WhatsApp
+            if (nombre && correo && mensaje) {
+                
+                // Opcional: Mostrar una alerta de éxito o limpiar el formulario
+                alert(`¡Gracias ${nombre}! Abriremos WhatsApp para que puedas enviar tu mensaje.`);
+                formulario.reset(); // Limpia los campos del formulario
+
+                // 7. Abrir el enlace de WhatsApp en una nueva pestaña
+                window.open(enlaceWhatsApp, '_blank');
+                
+            } else {
+                alert('Por favor, completa todos los campos del formulario antes de enviar.');
+            }
+        });
+    }
+
+    // 8. Mejorar el botón de envío con el icono de WhatsApp (Estilos CSS)
+    if (botonEnviar) {
+        
+        botonEnviar.innerHTML = 'Enviar por WhatsApp <i class="fab fa-whatsapp"></i>';
+    }
+});
